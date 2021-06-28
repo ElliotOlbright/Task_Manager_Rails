@@ -1,0 +1,15 @@
+<body style="background-color:pink;">
+  <form action="/tasks" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    
+    <h2 style="color:white; font-size: 25;">Enter a new task:</h2>
+    <p style="color:white"> Whats the Task Homie?</p>
+    
+    
+    <input type='text' name='task[title]'/><br/>
+    <p style="color:white">Tell me a lil Something about it...</p>
+    <textarea name='task[description]'></textarea><br/>
+    
+    <input type='submit'/>
+  </form>
+</body>

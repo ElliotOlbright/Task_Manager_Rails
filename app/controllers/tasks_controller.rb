@@ -8,14 +8,13 @@ class TasksController < ApplicationController
   end 
 
   def create
-    require "pry"; binding.pry
     task = Task.new({
-      title: params[:task][:title],
+      title: params[:task][:title.],
       description: params[:task][:description]
     })
-    require "pry"; binding.pry
+  
     task.save
-    require "pry"; binding.pry
+
     redirect_to '/tasks'
   end 
 
